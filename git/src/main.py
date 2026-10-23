@@ -10,7 +10,7 @@ class Order:
         if isinstance(dish, Dish):
             self.dishes.append(dish)
         else:
-            raise ValueError("Можно добавлять только объекты класса Dish.")
+            raise TypeError("Можно добавлять только объекты класса Dish.")
 
     def calculate_total(self):
         return sum(dish.price for dish in self.dishes)
